@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://anja0007:r65IkY2ECPcTc8Ur@clustercst8276.37todo3.mongodb.net/")
+client = MongoClient("mongodb+srv://minhquan:qJPRYNm8ruSEqjWf@cluster0.jtvun9w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+
 db = client.catalog
 collection = db.products
 
@@ -29,5 +30,12 @@ def add_product():
         return redirect(url_for("view_products"))
     return render_template("add_product.html")
 
+@app.route("/search")
+def search_products():
+    # Temporary search stub, you can improve later
+    return redirect(url_for('view_products'))
+
+
 if __name__ == "__main__":
          app.run(debug=True)
+
