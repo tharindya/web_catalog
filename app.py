@@ -4,8 +4,7 @@ from bson.objectid import ObjectId
 from bson.regex import Regex
 
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://minhquan:qJPRYNm8ruSEqjWf@cluster0.jtvun9w.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-
+client = MongoClient("mongodb+srv://anja0007:r65IkY2ECPcTc8Ur@clustercst8276.37todo3.mongodb.net/")
 db = client.catalog
 collection = db.products
 
